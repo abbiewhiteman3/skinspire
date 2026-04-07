@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facials &amp; Skin Care in Pleasant Grove, UT | Skinspire Esthetics</title>
+  <meta name="description" content="Skinspire Esthetics — personalized facials, microneedling, and advanced skin care in Pleasant Grove, Utah. Book with Xarissa Bradley, licensed esthetician.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blush:      #f0e6e1;
+      --mauve:      #dfd0cb;
+      --rose:       #7d6059;
+      --rose-deep:  #5e4540;
+      --cream:      #faf7f5;
+      --cream-dark: #f2ebe7;
+      --ink:        #1a1a1a;
+      --ink-mid:    #4a3c38;
+      --ink-light:  #9a8a85;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 48px;
+      mix-blend-mode: multiply;
+    }
+
+    .nav-logo {
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-logo em {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-link {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      text-decoration: none;
+      transition: color 200ms;
+    }
+
+    .nav-link:hover { color: var(--rose); }
+
+    .nav-book {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rose);
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--rose);
+      padding-bottom: 2px;
+      transition: color 200ms, border-color 200ms;
+      cursor: pointer;
+    }
+
+    .nav-book:hover { color: var(--rose-deep); border-color: var(--rose-deep); }
+
+    /* ─── OPENING ─── */
+    .opening {
+      min-height: 100vh;
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 140px 96px 100px;
+      border-bottom: 1px solid var(--mauve);
+    }
+
+    .opening-eyebrow {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .opening-eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--rose);
+    }
+
+    .opening-h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(44px, 5.5vw, 76px);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--ink);
+      max-width: 720px;
+      margin-bottom: 32px;
+    }
+
+    .opening-h1 em {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .opening-sub {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--ink-mid);
+      line-height: 1.9;
+      max-width: 480px;
+      margin-bottom: 48px;
+    }
+
+    .opening-cta {
+      display: inline-block;
+      background: var(--rose-deep);
+      color: #fff;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      align-self: flex-start;
+      transition: background 200ms;
+      cursor: pointer;
+    }
+
+    .opening-cta:hover { background: var(--rose); }
+
+    .opening-stats {
+      display: flex;
+      gap: 64px;
+      margin-top: 72px;
+      padding-top: 40px;
+      border-top: 1px solid var(--mauve);
+      flex-wrap: wrap;
+    }
+
+    .stat-num {
+      font-family: 'Lora', serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--rose-deep);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+
+    /* ─── RULE DIVIDER ─── */
+    .rule-bar {
+      background: var(--rose);
+      height: 2px;
+      width: 100%;
+    }
+
+    /* ─── SERVICES ─── */
+    .services {
+      background: var(--cream-dark);
+      padding: 100px 64px;
+    }
+
+    .services-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 64px;
+      border-bottom: 1px solid var(--mauve);
+      padding-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .services-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose);
+    }
+
+    .services-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .services-title em { font-style: italic; }
+
+    .services-count {
+      font-size: 11px;
+      font-weight: 300;
+      color: var(--ink-light);
+      letter-spacing: 0.05em;
+    }
+
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+    }
+
+    .service-row {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--mauve);
+      cursor: pointer;
+      transition: padding-left 250ms;
+      position: relative;
+    }
+
+    .service-row:hover { padding-left: 12px; }
+
+    .service-row:nth-child(odd) { padding-right: 48px; border-right: 1px solid var(--mauve); }
+    .service-row:nth-child(even) { padding-left: 48px; }
+    .service-row:nth-child(even):hover { padding-left: 60px; }
+
+    .service-num {
+      font-family: 'Lora', serif;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--rose);
+      flex-shrink: 0;
+      width: 28px;
+    }
+
+    .service-name {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--ink);
+      flex: 1;
+      transition: color 200ms;
+    }
+
+    .service-row:hover .service-name { color: var(--rose); }
+
+    .service-arrow {
+      opacity: 0;
+      font-size: 13px;
+      color: var(--rose);
+      transition: opacity 200ms;
+    }
+
+    .service-row:hover .service-arrow { opacity: 1; }
+
+    /* ─── STUDIO / ABOUT ─── */
+    .studio {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      min-height: 80vh;
+    }
+
+    .studio-image {
+      background: linear-gradient(170deg, var(--blush) 0%, var(--mauve) 60%, #dba8a8 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 48px;
+    }
+
+    .studio-image-bg-type {
+      position: absolute;
+      top: 40px;
+      left: -20px;
+      font-family: 'Lora', serif;
+      font-size: clamp(80px, 10vw, 140px);
+      font-weight: 700;
+      color: rgba(255,255,255,0.25);
+      user-select: none;
+      pointer-events: none;
+      line-height: 0.9;
+    }
+
+    .studio-badge {
+      background: var(--rose);
+      color: #fff;
+      padding: 12px 20px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    .studio-content {
+      background: var(--cream);
+      padding: 80px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .studio-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 24px;
+    }
+
+    .studio-heading {
+      font-family: 'Lora', serif;
+      font-size: clamp(32px, 3.5vw, 48px);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 32px;
+    }
+
+    .studio-heading em { font-style: italic; color: var(--rose); }
+
+    .studio-pull {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--rose);
+      line-height: 1.6;
+      border-left: 3px solid var(--mauve);
+      padding-left: 24px;
+      margin-bottom: 32px;
+    }
+
+    .studio-body {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--ink-mid);
+      line-height: 1.9;
+      column-count: 2;
+      column-gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .studio-credentials {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .studio-cred {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--ink-mid);
+    }
+
+    .studio-cred-tick {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ─── PROOF ─── */
+    .proof {
+      background: var(--rose);
+      padding: 88px 64px;
+    }
+
+    .proof-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 64px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .proof-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 400;
+      font-style: italic;
+      color: #fff;
+    }
+
+    .proof-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.2);
+    }
+
+    .proof-item {
+      background: var(--rose);
+      padding: 40px 36px;
+      transition: background 200ms;
+    }
+
+    .proof-item:hover { background: var(--rose-deep); }
+
+    .proof-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 20px;
+    }
+
+    .star {
+      width: 12px;
+      height: 12px;
+      fill: rgba(255,255,255,0.9);
+    }
+
+    .proof-quote {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .proof-attribution {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .proof-service {
+      font-size: 11px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      margin-top: 3px;
+    }
+
+    /* ─── BOOKING ─── */
+    .booking {
+      background: var(--ink);
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 500px;
+    }
+
+    .booking-left {
+      padding: 88px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .booking-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 24px;
+    }
+
+    .booking-headline {
+      font-family: 'Lora', serif;
+      font-size: clamp(40px, 5vw, 72px);
+      font-weight: 400;
+      line-height: 1.05;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .booking-headline em {
+      font-style: italic;
+      color: var(--blush);
+    }
+
+    .booking-sub {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+
+    .booking-btn {
+      display: inline-block;
+      background: var(--blush);
+      color: var(--rose-deep);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 18px 44px;
+      align-self: flex-start;
+      transition: background 200ms, color 200ms;
+      cursor: pointer;
+    }
+
+    .booking-btn:hover { background: #fff; color: var(--rose-deep); }
+
+    .booking-right {
+      padding: 88px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .booking-info-block {
+      margin-bottom: 40px;
+    }
+
+    .info-heading {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 12px;
+    }
+
+    .info-text {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.9;
+    }
+
+    .info-text a {
+      color: var(--blush);
+      text-decoration: none;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--rose-deep);
+      padding: 32px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-logo {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+    }
+
+    .footer-logo em { font-style: italic; color: var(--blush); }
+
+    .footer-copy {
+      font-size: 11px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .footer-omnia {
+      font-size: 11px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .footer-omnia a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+    }
+
+    /* ─── DESIGN NOTE ─── */
+    .design-note {
+      background: var(--blush);
+      border-bottom: 1px solid var(--mauve);
+      padding: 10px 64px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rose);
+      text-align: center;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      nav { padding: 22px 32px; }
+
+      .opening { grid-template-columns: 1fr; }
+      .opening { padding: 120px 32px 80px; min-height: 100vh; }
+
+      .services { padding: 80px 32px; }
+      .services-list { grid-template-columns: 1fr; }
+      .service-row:nth-child(odd) { padding-right: 0; border-right: none; }
+      .service-row:nth-child(even) { padding-left: 0; }
+      .service-row:nth-child(even):hover { padding-left: 12px; }
+
+      .studio { grid-template-columns: 1fr; }
+      .studio-image { min-height: 300px; }
+      .studio-content { padding: 60px 32px; }
+      .studio-body { column-count: 1; }
+
+      .proof { padding: 72px 32px; }
+      .proof-grid { grid-template-columns: 1fr; }
+
+      .booking { grid-template-columns: 1fr; }
+      .booking-left { padding: 72px 32px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .booking-right { padding: 64px 32px; }
+
+      footer { padding: 28px 32px; flex-wrap: wrap; gap: 12px; }
+
+      .design-note { padding: 10px 32px; }
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 18px 20px; }
+      .nav-right .nav-link { display: none; }
+      .opening { padding: 100px 20px 60px; }
+      .services { padding: 60px 20px; }
+      .studio-content { padding: 48px 20px; }
+      .proof { padding: 60px 20px; }
+      .booking-left, .booking-right { padding: 56px 20px; }
+      footer { padding: 24px 20px; }
+    }
+
+    /* ─── SCROLL REVEAL ─── */
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 600ms ease, transform 600ms ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="design-note">Website Mockup — Skinspire Esthetics | Omnia Marketing</div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Skin<em>spire</em></a>
+    <div class="nav-right">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#booking" class="nav-book">Book Now</a>
+    </div>
+  </nav>
+
+  <!-- OPENING -->
+  <section class="opening">
+    <div class="opening-eyebrow reveal">Pleasant Grove, Utah &nbsp;&mdash;&nbsp; Advanced Esthetics</div>
+    <h1 class="opening-h1 reveal">Your skin,<br>treated like it<br><em>matters.</em></h1>
+    <p class="opening-sub reveal">Results-driven skin care from a studio that keeps its schedule intentional — so every client gets full attention, not a slot on an assembly line.</p>
+    <a href="#booking" class="opening-cta reveal">Book Your Appointment</a>
+    <div class="opening-stats reveal">
+      <div class="stat">
+        <div class="stat-num">8+</div>
+        <div class="stat-label">Years in Practice</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">A+</div>
+        <div class="stat-label">BBB Accredited</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Personalized Care</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule-bar"></div>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="services-top reveal">
+      <div>
+        <div class="services-label">What We Do</div>
+        <h2 class="services-title">Every treatment,<br><em>built for your skin</em></h2>
+      </div>
+      <span class="services-count">08 treatments</span>
+    </div>
+    <div class="services-list">
+      <div class="service-row reveal">
+        <span class="service-num">01</span>
+        <span class="service-name">Custom Facials</span>
+        <span class="service-arrow">&#8594;</span>
+      </div>
+      <div class="service-row reveal">
+        <span class="service-num">02</span>
+        <span class="service-name">Microneedling</span>
+        <span class="service-arrow">&#8594;</span>
+      </div>
+      <div class="service-row reveal">
+        <span class="service-num">03</span>
+        <span class="service-name">Chemical Peels</span>
+        <span class="service-arrow">&#8594;</span>
+      </div>
+      <div class="service-row reveal">
+        <span class="service-num">04</span>
+        <span class="service-name">Eyelash Services</span>
+        <span class="service-arrow">&#8594;</span>
+      </div>
+      <div class="service-row reveal">
+        <span class="service-num">05</span>
+        <span class="service-name">Microdermabrasion</span>
+        <span class="service-arrow">&#8594;</span>
+      </div>
+      <div class="service-row reveal">
+        <span class="service-num">06</span>
+        <span class="service-name">Waxing</span>
+        <span class="service-arrow">&#8594;</span>
+      </div>
+      <div class="service-row reveal">
+        <span class="service-num">07</span>
+        <span class="service-name">Gua Sha &amp; Lymphatic</span>
+        <span class="service-arrow">&#8594;</span>
+      </div>
+      <div class="service-row reveal">
+        <span class="service-num">08</span>
+        <span class="service-name">Body Care</span>
+        <span class="service-arrow">&#8594;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO / ABOUT -->
+  <section class="studio" id="about">
+    <div class="studio-image">
+      <div class="studio-image-bg-type">X</div>
+      <div class="studio-badge">Est. Pleasant Grove, 2017</div>
+    </div>
+    <div class="studio-content">
+      <div class="studio-label reveal">Meet Xarissa</div>
+      <h2 class="studio-heading reveal">Eight years of skin.<br>No shortcuts. <em>No scripts.</em></h2>
+      <blockquote class="studio-pull reveal">
+        "Your skin is the most personal thing I work with. That's not something I take lightly."
+      </blockquote>
+      <p class="studio-body reveal">
+        I built Skinspire because I wanted to do this work the right way — not volume-based, not upsell-driven. Every client who comes through the door gets a real assessment and a treatment that's designed around what their skin actually needs that day.
+        <br><br>
+        After eight years in Pleasant Grove, I've seen what consistent, personalized care does for skin. It's not one session — it's a relationship with your skin over time. That's what I'm here to build with you.
+      </p>
+      <div class="studio-credentials reveal">
+        <div class="studio-cred">
+          <svg class="studio-cred-tick" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="7.5" stroke="#9e6b6b"/>
+            <path d="M4.5 8.5L7 11L11.5 6" stroke="#9e6b6b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Licensed Esthetician — State of Utah
+        </div>
+        <div class="studio-cred">
+          <svg class="studio-cred-tick" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="7.5" stroke="#9e6b6b"/>
+            <path d="M4.5 8.5L7 11L11.5 6" stroke="#9e6b6b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          BBB A+ Accredited Business
+        </div>
+        <div class="studio-cred">
+          <svg class="studio-cred-tick" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="7.5" stroke="#9e6b6b"/>
+            <path d="M4.5 8.5L7 11L11.5 6" stroke="#9e6b6b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Specialized in acne, anti-aging &amp; skin renewal
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="proof" id="reviews">
+    <div class="proof-header reveal">
+      <h2 class="proof-title">What clients say</h2>
+      <span class="proof-label">Client Reviews</span>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-item reveal">
+        <div class="proof-stars">
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+        </div>
+        <p class="proof-quote">"My skin has never looked better. After years of struggling with adult acne, I finally feel confident without makeup. Xarissa is genuinely gifted at what she does."</p>
+        <div class="proof-attribution">Sarah M.</div>
+        <div class="proof-service">Custom Facial + Acne Treatment</div>
+      </div>
+      <div class="proof-item reveal">
+        <div class="proof-stars">
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+        </div>
+        <p class="proof-quote">"I've done microneedling at a few different places and nothing compares. She's thorough, careful, and the results have been dramatic. I won't go anywhere else."</p>
+        <div class="proof-attribution">Jessica T.</div>
+        <div class="proof-service">Microneedling Series</div>
+      </div>
+      <div class="proof-item reveal">
+        <div class="proof-stars">
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+          <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5z"/></svg>
+        </div>
+        <p class="proof-quote">"Three years and I won't go anywhere else. Xarissa remembers everything about your skin and actually adjusts what she does each visit. That level of care is rare."</p>
+        <div class="proof-attribution">Brooke H.</div>
+        <div class="proof-service">Regular Facial Client</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="booking" id="booking">
+    <div class="booking-left">
+      <div class="booking-label reveal">Next Step</div>
+      <h2 class="booking-headline reveal">Your best<br>skin starts<br><em>here.</em></h2>
+      <p class="booking-sub reveal">Serving Pleasant Grove and Utah County. New clients welcome — book online or call directly.</p>
+      <a href="https://skinspire-aesthetics-llc.square.site/" class="booking-btn reveal">Book Your Appointment</a>
+    </div>
+    <div class="booking-right">
+      <div>
+        <div class="booking-info-block reveal">
+          <div class="info-heading">Studio Address</div>
+          <div class="info-text">1416 W State Rd<br>Pleasant Grove, UT 84062</div>
+        </div>
+        <div class="booking-info-block reveal">
+          <div class="info-heading">Hours</div>
+          <div class="info-text">
+            Wednesday &nbsp;&nbsp; 10:00 am – 5:00 pm<br>
+            Thursday &nbsp;&nbsp;&nbsp;&nbsp; 9:00 am – 5:00 pm<br>
+            Friday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10:30 am – 3:00 pm
+          </div>
+        </div>
+        <div class="booking-info-block reveal">
+          <div class="info-heading">Phone</div>
+          <div class="info-text"><a href="tel:8013584767">(801) 358-4767</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#" class="footer-logo">Skin<em>spire</em></a>
+    <span class="footer-copy">&copy; 2026 Skinspire Esthetics, LLC &nbsp;&middot;&nbsp; Pleasant Grove, Utah</span>
+    <span class="footer-omnia">Site by <a href="https://marketing-omnia.com">Omnia Marketing</a></span>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
